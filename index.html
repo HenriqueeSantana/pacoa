@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Promoção de Ovo de Páscoa</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="./img/pascoa.jpg">
+</head>
+<body>
+
+  <header>
+    <h1> Promoção Especial de Páscoa!</h1>
+    <p>Ovo de chocolate artesanal com até <strong>30% de desconto</strong></p>
+    <!-- Contador de tempo -->
+    <div id="contador">
+      <strong>Promoção termina em:</strong> <span id="contador-timer">00:00:00</span>
+    </div>
+  </header>
+
+  <main class="promo-container">
+    <div class="promo-img">
+      <img src="./img/WhatsApp Image 2025-04-15 at 21.53.21.jpeg" alt="Ovo de Páscoa">
+    </div>
+    <div class="promo-details">
+      <h2>Ovo de Páscoa Gourmet 350g</h2>
+      <p>Feito com chocolate belga, recheio cremoso de brigadeiro e crocante de avelã. Embalado com carinho para surpreender quem você ama.</p>
+      <div class="price">
+        <span class="old-price">R$ 79,90</span> <span class="new-price">R$ 29,90</span>
+      </div>
+      <a href="formulario.html" class="btn">🍬 Comprar Agora</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; Copyright 2023. Todos os direitos reservados. | Cacau Comércio Eletrônico LTDA 32.143.933/0002-05.</p>
+    <p>Endereço: Avenida Helio Ossamu Daikuara, 1445, Bairro Jardim Vista Alegre, Município Embu das Artes - SP, CEP: 06807-000</p>
+  </footer>
+
+  <!-- ✅ Selo de Compra Segura -->
+  
+<div class="selo-seguro">
+  <img src="./img/comprasegura.png" alt="Compra 100% Segura">
+  <img src="./img/reclame.png" alt="Reclame Aqui">
+</div>
+
+
+
+  <!-- POPUP -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup-box">
+      <span class="close-btn" onclick="fecharPopup()">&times;</span>
+      <h3>🎉 Oferta Relâmpago!</h3>
+      <p>Ganhe <strong>frete grátis</strong> nas compras acima de R$ 50,00 até hoje às 23h59!</p>
+      <a href="formulario.html" class="btn">Aproveitar Agora</a>
+    </div>
+  </div>
+
+  <!-- JavaScript externo -->
+  <script src="./js/popup.js"></script>
+  <script src="./js/contador.js"></script>
+  <script src="./js/validacao.js"></script>
+  <script src="./js/ip.js"></script>
+
+</body>
+</html>

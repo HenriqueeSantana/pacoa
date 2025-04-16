@@ -1,0 +1,234 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* Estilos para o contador no header */
+#contador {
+  font-size: 1.2em;
+  color: #ff6f61; /* Cor do contador */
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+  
+  body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #fff0f5 0%, #ffe6e6 100%);
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: linear-gradient(90deg, #ffb6b9, #ff6f91);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 1.2em;
+  }
+  
+  .promo-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .promo-container:hover {
+    transform: scale(1.01);
+  }
+  
+  .promo-img {
+    flex: 1 1 300px;
+  }
+  
+  .promo-img img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  
+  .promo-img img:hover {
+    transform: scale(1.03);
+  }
+  
+  .promo-details {
+    flex: 1 1 400px;
+  }
+  
+  .promo-details h2 {
+    font-size: 2em;
+    color: #b25068;
+    margin-bottom: 10px;
+  }
+  
+  .promo-details p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .price {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+  }
+  
+  .new-price {
+    color: #ff6f61;
+    font-weight: bold;
+  }
+  
+  .btn {
+    display: inline-block;
+    background: #ff6f61;
+    color: white;
+    padding: 12px 28px;
+    font-size: 1em;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .btn:hover {
+    background: #e85c50;
+    transform: scale(1.05);
+  }
+
+  .selo-seguro {
+    display: flex;               /* ativa o flexbox */
+    justify-content: center;     /* centraliza horizontalmente */
+    align-items: center;         /* centraliza verticalmente (caso tenha alturas diferentes) */
+    gap: 35px;                   /* espaço entre as imagens */
+    margin: 20px 0;              /* margem em cima e embaixo */
+  }
+  
+  .selo-seguro img {
+    max-width: 150px;            /* ou o tamanho que preferir */
+    height: auto;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8d7da;
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 40px;
+    border-top: 1px solid #ffcdd2;
+  }
+  
+  @media (max-width: 768px) {
+    .promo-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .promo-details h2 {
+      font-size: 1.8em;
+    }
+  
+    .promo-details p {
+      font-size: 1em;
+    }
+  
+    .btn {
+      width: 100%;
+      padding: 14px;
+    }
+  }
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .popup-box {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 16px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: slideDown 0.4s ease-in-out;
+    position: relative;
+  }
+  
+  .popup-box h3 {
+    font-size: 1.8em;
+    color: #b25068;
+    margin-bottom: 10px;
+  }
+  
+  .popup-box p {
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 20px;
+  }
+  
+  .popup-box .btn {
+    background: #ff6f61;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s;
+  }
+  
+  .popup-box .btn:hover {
+    background: #e85c50;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.8em;
+    color: #888;
+    cursor: pointer;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
